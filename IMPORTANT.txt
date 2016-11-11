@@ -1,0 +1,47 @@
+————————
+Catégories obligatoires :
+————————
+| (Nom : Atlas du Rouergue)
+| Slug : atlas
+———
+| (Nom : Histoire(s))
+| Slug : histoires
+———
+| (Nom : Cartographie)
+| Slug : carto
+———
+| (Nom : Art)
+| Slug : art
+———
+| (Nom : Ressources)
+| Slug : ressources
+———
+| (Nom : Évènements)
+| Slug : event
+————————
+
+————————
+Pages d’articles
+————————
+| (Nom : Atlas du Rouergue)
+| Slug : atlas-du-rouergue
+———
+| (Nom : Histoire(s))
+| Slug : histoires
+———
+| (Nom : Cartographie)
+| Slug : cartographie
+———
+| (Nom : Art)
+| Slug : art
+———
+| (Nom : Ressources)
+| Slug : ressources
+———
+| (Nom : Évènements)
+| Slug : evenements
+———
+| (Nom : Mentions légales)
+| Slug : mentions-legales
+————————
+

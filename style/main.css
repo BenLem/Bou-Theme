@@ -1,0 +1,1263 @@
+body {
+    background-color: #F5F3F0;
+}
+
+header.main {
+    max-width: 970px;
+    margin: auto;
+    position: relative;
+}
+
+header.main .logo {
+    display: block;
+    max-width: 420px; height: 160px;
+    margin: 20px auto;
+    background: url(res/logo.png) no-repeat;
+    background-size: 100% auto;
+}
+
+/* --- Menu --- */
+
+header.main .menu {
+    position: absolute;
+    top: 30%;
+}
+
+header.main .menu div#menu-btn {
+    font-size: 29px;
+    outline: none;
+    border: none;
+    font-family: Reef, sans-serif;
+    text-transform: uppercase;
+    opacity: 0.8;
+    background-color: #E9E9E9;
+    padding: 7px 0px;
+    padding-top: 9px;
+    padding-left: 52px;
+    padding-right: 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all ease .3s;
+    position: relative;
+}
+
+header.main .menu div#menu-btn .hamburger {
+    width: 20px; height: auto;
+    position: absolute;
+    top: 14px;
+    left: 20px;
+}
+
+header.main .menu div#menu-btn .hamburger span {
+    display: block;
+    opacity: .8;
+    width: 100%; height: 3px;
+    background-color: #000;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    transition: all ease .3s;
+}
+
+header.main .menu div#menu-btn:hover, header.main .menu div#menu-btn.show {
+    transition: all ease .1s;
+    background-color: #73aaa4;
+    color: #fff;
+    box-shadow: 3px 3px 20px rgba(0,0,0,.1);
+}
+
+header.main .menu div#menu-btn.show {
+    padding: 7px 37px;
+    padding-top: 9px;
+    transition: padding ease .2s;
+    transition-delay: .1s;
+}
+
+header.main .menu div#menu-btn:hover .hamburger span {
+    background-color: #fff;
+    transition: all ease .1s;
+}
+
+header.main .menu div#menu-btn.show .hamburger span {
+    width: 0px;
+}
+
+header.main .menu div#menu-btn.show .hamburger span:nth-child(1) {
+    transition-delay: 0s;
+}
+
+header.main .menu div#menu-btn.show .hamburger span:nth-child(2) {
+    transition-delay: .05s;
+}
+
+header.main .menu div#menu-btn.show .hamburger span:nth-child(3) {
+    transition-delay: .1s;
+}
+
+header.main .menu div#menu-btn:active {
+    transition: all ease .1s;
+    background-color: #73aaa4;
+    color: #fff;
+    box-shadow: 3px 3px 20px rgba(0,0,0,.1), inset 2px 2px 20px rgba(0,0,0,.1);
+}
+
+header.main .menu ul:before {
+	content: "";
+	width: 0px;
+	height: 0px;
+	border: 0.8em solid transparent;
+	position: absolute;
+    left: 20%;
+	top: -22px;
+	border-bottom: 10px solid #73aaa4;
+}
+
+header.main .menu ul {
+    font-family: "Roboto Condensed", sans-serif;
+    line-height: 1.5;
+    background-color: #73aaa4;
+    border-radius: 10px;
+    padding: 5px 22px;
+    box-shadow: 3px 3px 20px rgba(0,0,0,.1);
+    position: absolute;
+    visibility: hidden;
+    top: 60px;
+    width: 230px;
+    opacity: 0;
+    transition: visibility 0s linear .2s, opacity .2s ease, top .2s ease;
+    z-index: 1000;
+}
+
+header.main .menu ul.show {
+    visibility: visible;
+    top: 70px;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity .1s ease, top .1s ease;
+}
+
+header.main .menu ul a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    position: relative;
+    transition: all ease .15s;
+}
+
+header.main .menu ul a:before {
+	content: "";
+    font-size: 9px;
+	width: 0px;
+	height: 0px;
+	border: 0.8em solid transparent;
+	position: absolute;
+    left: -20px;
+	top: 21px;
+	border-left: 10px solid #fff;
+    opacity: 0;
+    transition: all ease .15s;
+}
+
+header.main .menu ul li:first-child a {
+
+}
+
+header.main .menu ul li:first-child a:after {
+    content: '\e900';
+    position: absolute;
+    right: 13px;
+    top: 15px;
+    opacity: .4;
+    font-size: 17px;
+    font-family: icomoon;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+header.main .menu ul li:last-child a {
+    border: none;
+}
+
+header.main .menu ul a:hover {
+    padding-left: 20px;
+    padding-right: 4px;
+}
+
+header.main .menu ul a:hover:before {
+    left: 2px;
+    opacity: .7;
+}
+
+/* --- Home --- */
+
+.wrap-main {
+    max-width: 870px;
+    margin: 40px auto;
+}
+
+.mosaic a.atlas {
+    background: url(res/atlas.png) #A3B960;
+}
+
+.mosaic a.histoires {
+    background: url(res/histoires.png) #e8c340;
+}
+
+.mosaic a.carto {
+    background: url(res/carto.png) #2794BE;
+}
+
+.mosaic a.art {
+    background: url(res/art.png) #cc5f00;
+}
+
+.mosaic a.ressources {
+    background: #123B57;
+}
+
+.mosaic a.event {
+    background: url(res/event.png) #a7361d;
+}
+
+.mosaic a {
+    display: inline-block;
+    width: 49.5%;
+    margin-right: 1%;
+    height: 310px;
+    background-color: #73aaa4;
+    font-family: 'Roboto Condensed';
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    background-size: 104% !important;
+    transition: background-size ease .2s;
+    margin-bottom: 6px;
+}
+
+.mosaic a:nth-child(even) {
+    margin-right: 0%;
+}
+
+.mosaic a:hover {
+    background-size: 102% !important;
+}
+
+.mosaic a .content {
+    width: 85%;
+    position: absolute;
+    top: 30%;
+    right: 40px;
+    text-align: right;
+}
+
+.mosaic a .content h1 {
+    text-transform: uppercase;
+    font-size: 40px;
+    transition: margin ease .2s;
+    position: relative;
+}
+
+.mosaic a .content h1::before {
+    content: "";
+    font-size: 9px;
+	width: 0px;
+	height: 0px;
+	border: 0.8em solid transparent;
+	position: absolute;
+	top: 16px;
+    opacity: 0;
+    transition: all ease .2s;
+}
+
+.mosaic a:nth-child(odd) .content h1::before {
+    left: -30px;
+	border-left: 10px solid #fff;
+}
+
+.mosaic a:nth-child(even) .content h1::before {
+	right: -30px;
+    border-right: 10px solid #fff;
+}
+
+.mosaic a:hover .content h1 {
+	margin-left: 7px;
+}
+
+.mosaic a:nth-child(even):hover .content h1 {
+	margin-right: 7px;
+}
+
+.mosaic a:nth-child(odd):hover .content h1::before {
+	left: -18px;
+    opacity: .7;
+}
+
+.mosaic a:nth-child(even):hover .content h1::before {
+    right: -18px;
+    opacity: .7;
+}
+
+.mosaic a .content h3 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 16px;
+    line-height: 1.3;
+}
+
+.mosaic a:nth-child(odd) .content {
+    left: 40px;
+    text-align: left;
+}
+
+/* --- Home --- À propos --- */
+
+.mosaic a.about {
+    width: 100%;
+    height: auto;
+    text-transform: uppercase;
+    font-size: 35px;
+    padding: 0px;
+    opacity: 0.7;
+    transition: opacity ease .2s;
+}
+
+.mosaic a.about:hover {
+    opacity: 1;
+}
+
+.mosaic a.about .content {
+    width: 180px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    padding: 35px 0px;
+    left: 0px;
+}
+
+/* --- Footer --- */
+
+footer.main {
+    margin-top: 50px;
+    background-color: #303336;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 18px;
+    color: #fff;
+    cursor: default;
+}
+
+footer.main .content {
+    max-width: 1020px;
+    margin: auto;
+    padding: 30px;
+    padding-top: 55px;
+    position: relative;
+}
+
+footer.main .content .left {
+    max-width: 600px;
+    opacity: .7;
+    display: inline-block;
+}
+
+footer.main .copyright {
+    max-width: 1080px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    color: rgba(255,255,255,.2);
+    font-size: 15px;
+}
+
+footer.main a.admin {
+    position: absolute;
+    font-size: 16px;
+    opacity: 0;
+    right: 30px;
+    bottom: 30px;
+    padding: 20px 50px;
+}
+
+footer.main a.admin:hover {
+    position: absolute;
+    font-size: 16px;
+    opacity: 1;
+    right: 30px;
+    bottom: 30px;
+    padding: 20px 50px;
+}
+
+footer.main a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    color: rgba(255,255,255,.3);
+    transition: all ease .2s;
+}
+
+footer.main a:hover {
+    color: rgba(255,255,255,.5);
+    transition: all ease .1s;
+}
+
+footer.main .search:after {
+    content: "\e986";
+	font-family: icomoon;
+    font-size: 16px;
+    opacity: .2;
+    position: absolute;
+    top: 12px;
+    right: 17px;
+    z-index: 1;
+}
+
+footer.main .search {
+    display: inline-block;
+    float: right;
+    position: relative;
+}
+
+footer.main .search input {
+    -webkit-appearance:none;
+    border: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #383d41;
+    padding: 10px 20px;
+    padding-right: 50px;
+    font-size: 20px;
+    max-width: 200px;
+    opacity: .5;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    transition: all ease .2s;
+    outline: none;
+    z-index: 20;
+}
+
+footer.main .search input:hover {
+    background-color: #3e4448;
+}
+
+footer.main .search input:focus {
+    background-color: #fff;
+    color: #000;
+    opacity: 1;
+    max-width: 300px;
+}
+
+/* --- Category Pages --- */
+
+/** CSS is in category "Article" below **/
+
+article.main.page header h1.title {
+    padding-top: 35px;
+    max-width: 950px;
+    border-bottom: 3px solid rgba(250,250,250,0.3);
+}
+
+article.main.page.alone header h1.title {
+    border-bottom: none;
+    padding-bottom: 40px;
+}
+
+article.main.page header h3.cat {
+    text-transform: none;
+    max-width: 650px;
+    border-top: none;
+    font-size: 24px;
+    line-height: 1.5;
+    padding-bottom: 40px;
+}
+
+article.main.page header {
+    margin-top: 30px;
+}
+
+article.main.atlas header {
+    background-color: #A3B960;
+}
+
+article.main.histoires header {
+    background-color: #e8c340;
+    text-shadow: 0px 0px 7px rgba(0,0,0,.2);
+}
+
+article.main.carto header {
+    background-color: #2794BE;
+}
+
+article.main.art header {
+    background-color: #cc5f00;
+}
+
+article.main.ressources header {
+    background-color: #123B57;
+}
+
+article.main.event header {
+    background-color: #a7361d;
+}
+
+article.main.a-propos header {
+    background-color: #73aaa4;
+}
+
+article.main.page .content {
+    padding-top: 40px;
+}
+
+article.main.page .post {
+    padding: 30px 50px;
+    max-width: 784px;
+    margin: auto;
+    margin-top: 36px;
+    background-color: #F1ECE5;
+}
+
+article.main.page h2.title {
+    font-family: "Yeah Papa", sans-serif;
+    font-size: 52px;
+    margin-bottom: 18px;
+}
+
+
+article.main.page h2.title a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity ease .3s;
+}
+
+article.main.page h2.title a:hover {
+    opacity: .7;
+}
+
+article.main.page .excerpt {
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+    font-size: 19px;
+    padding-top: 18px;
+    margin-bottom: 23px;
+    line-height: 1.6;
+    border-top: 2px solid rgba(0,0,0,.05);
+}
+
+article.main.page article.event .excerpt {
+    margin-bottom: 0;
+}
+
+article.main.page article.event .desc {
+    display: inline-block;
+    width: 55%;
+    text-align: justify;
+    padding-right: 5%;
+}
+
+article.main.page article.event .infos {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    background-color: #e3ded8;
+    color: #969594;
+}
+
+article.main.page article.event .infos ul {
+    padding: 20px 30px;
+    padding-right: 30px;
+    text-align: right;
+}
+
+article.main.page article.event .infos li {
+    position: relative;
+    padding-left: 10px;
+}
+
+article.main.page article.event .infos li.date {
+    display: inline-block;
+}
+
+article.main.page article.event .infos li.date:after {
+    content: '\e953';
+    position: absolute;
+    left: -22px;
+    top: 4px;
+    opacity: .8;
+    font-size: 15px;
+    font-family: icomoon;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+article.main.page article.event .infos li.time {
+    float: left;
+    vertical-align: top;
+}
+
+article.main.page article.event .infos li.time:before {
+    content: '\e94e';
+    position: absolute;
+    left: -13px;
+    top: 4px;
+    opacity: .8;
+    font-size: 15px;
+    font-family: icomoon;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+article.main.page article.event .infos li.place {
+    text-align: left;
+    margin-top: 17px;
+    padding-top: 17px;
+    width: 100%;
+    border-top: 2px solid rgba(0,0,0,.05);
+}
+
+article.main.page article.event .infos li.place:before {
+    content: '\e947';
+    position: absolute;
+    left: -13px;
+    top: 22px;
+    opacity: .8;
+    font-size: 15px;
+    font-family: icomoon;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+article.main.page article.event .infos li.city {
+    text-align: left;
+}
+
+article.main.page article.event .infos a.read-more {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 21px;
+    padding: 10px 0px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity ease .3s;
+}
+
+article.main.page article.event .infos a.read-more:hover {
+    opacity: .9;
+    transition: opacity ease .1s;
+}
+
+article.main.page footer {
+    max-width: 816px;
+    margin: auto;
+    position: relative;
+    margin-top: 35px;
+}
+
+article.main.page footer .bar {
+    width: 100%;
+    height: 28px;
+    border-radius: 28px;
+    background-color: #e3ded8;
+    opacity: .6;
+}
+
+article.main.page footer .bar p {
+    position: absolute;
+    top: 6px;
+    right: 170px;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    opacity: .3;
+}
+
+article.main.page footer .bar p:before {
+    content: '\e953';
+    position: absolute;
+    left: -22px;
+    top: 0px;
+    font-size: 15px;
+    font-family: icomoon;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+
+article.main.page footer .read-more {
+    position: absolute;
+    top: -9px;
+    right: 0px;
+    font-family: "Roboto Condensed", sans-serif;
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 26px;
+    padding-right: 38px;
+    background-color: #73aaa4;
+    font-size: 21px;
+    font-weight: 300;
+    border-radius: 30px;
+    transition: all ease .3s;
+}
+
+article.main.page article.atlas footer .read-more, article.main.page .more a.atlas {
+    background-color: #A3B960;
+}
+
+article.main.page article.histoires footer .read-more, article.main.page .more a.histoires {
+    background-color: #e8c340;
+    text-shadow: 0px 0px 7px rgba(0,0,0,.1);
+}
+
+article.main.page article.carto footer .read-more, article.main.page .more a.carto {
+    background-color: #2794BE;
+}
+
+article.main.page article.art footer .read-more, article.main.page .more a.art {
+    background-color: #cc5f00;
+}
+
+article.main.page article.ressources footer .read-more, article.main.page .more a.ressources {
+    background-color: #123B57;
+}
+
+article.main.page article.event .read-more, article.main.page .more a.event {
+    background-color: #a7361d;
+}
+
+article.main.page footer .read-more:hover {
+    padding: 12px 24px;
+    padding-left: 40px;
+    transition: all ease .1s;
+}
+
+article.main.page footer .read-more:after {
+    content: "";
+	width: 0px;
+	height: 0px;
+	border: 0.35em solid transparent;
+	position: absolute;
+    right: 8px;
+	top: 16px;
+	border-left: 10px solid #fff;
+    opacity: .6;
+    transition: all ease .3s;
+}
+
+article.main.page footer .read-more:hover:after {
+    right: -8px;
+    opacity: 0;
+    transition: all ease .1s;
+}
+
+article.main.page footer .read-more:before {
+    content: "";
+	width: 0px;
+	height: 0px;
+	border: 0.35em solid transparent;
+	position: absolute;
+    left: 0px;
+	top: 16px;
+	border-left: 10px solid #fff;
+    opacity: 0;
+    transition: all ease .3s;
+}
+
+article.main.page footer .read-more:hover:before {
+    left: 20px;
+    opacity: .6;
+    transition: all ease .1s;
+}
+
+article.post.error .title {
+    color: #520000;
+}
+
+article.main.page .more a {
+    max-width: 784px;
+    margin: auto;
+    display: block;
+    padding: 15px 50px;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: .2px;
+    margin-top: 46px;
+    font-size: 21px;
+    font-weight: 300;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    transition: opacity ease .3s;
+}
+
+article.main.page .more a:hover {
+    opacity: .9;
+    transition: opacity ease .1s;
+}
+
+article.main.page .more a:before, article.main.page .more a:after {
+    content: "";
+	width: 0px;
+	height: 0px;
+	border: 0.35em solid transparent;
+	position: absolute;
+    left: 20px;
+	top: 20px;
+	border-top: 10px solid #fff;
+    opacity: .6;
+    transition: all ease .3s;
+}
+
+article.main.page .more a:after {
+    left: auto;
+    right: 20px;
+}
+
+article.main.page .more a:hover:before, article.main.page .more a:hover:after {
+    top: 24px;
+    transition: all ease .1s;
+}
+
+article.main.page nav.pagination {
+    max-width: 884px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+article.main.page nav.pagination div {
+    display: inline-block;
+}
+
+article.main.page nav.pagination a {
+    width: 140px;
+    text-align: center;
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    color: #363636;
+    background-color: #F1ECE5;
+    padding: 20px 0px;
+    font-size: 21px;
+    font-weight: 400;
+    border: 2px solid #efeae3;
+    border-right: 2px solid #e0dbd4;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    opacity: .6;
+    margin-right: -2px;
+    transition: opacity ease .3s;
+}
+
+article.main.page nav.pagination a:hover {
+    opacity: 1;
+    transition: opacity ease .1s;
+}
+
+article.main.page nav.pagination div.next a {
+    border-radius: 50px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-right: none;
+    border-left: 2px solid #e0dbd4;
+}
+
+/* --- Article --- */
+
+article.main header {
+    background-color: #D05A3E;
+    color: #fff;
+    text-align: center;
+    cursor: default;
+}
+
+article.main header h1.title {
+    font-size: 60px;
+    max-width: 730px;
+    margin: auto;
+    padding: 20px;
+    padding-top: 45px; padding-bottom: 40px;
+    font-family: "Yeah Papa", sans-serif;
+}
+
+article.main header h3.cat {
+    font-size: 25px;
+    max-width: 950px;
+    margin: auto;
+    padding: 30px 0;
+    font-family: "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    border-top: 3px solid rgba(255,255,255,0.4);
+    font-weight: 300;
+}
+
+article.main .content {
+    margin: auto;
+    padding-bottom: 40px;
+    max-width: 884px;
+    background-color: #F1ECE5;
+    color: #363636;
+    font-size: 19px;
+    font-family: 'Roboto Slab', Roboto, sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+article.main .content .infos {
+    font-size: 16px;
+    background-color: rgba(0,0,0,.1);
+    padding: 10px 40px;
+    text-align: center;
+    opacity: .5;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+article.main .content .infos p {
+    margin-bottom: 0px;
+    padding: 0px;
+    display: inline-block;
+}
+
+article.main .content .infos p.right {
+    position: absolute;
+    top: 9px;
+    right: 20px;
+    opacity: .5;
+}
+
+article.main .content p {
+    margin-bottom: 25px;
+    padding: 0px 60px;
+}
+
+article.main .content p:last-child {
+    margin-bottom: 0px;
+}
+
+article.main .content h1 {
+    font-size: 28px;
+    font-family: "Roboto Condensed", Roboto, sans-serif;
+    font-weight: 600;
+    margin-bottom: 35px;
+    padding: 0px 60px;
+}
+
+article.main .content h2 {
+    font-size: 22px;
+    font-family: "Roboto Condensed", Roboto, sans-serif;
+    font-weight: 400;
+    margin-bottom: 35px;
+    padding: 0px 60px;
+}
+
+article.main .content em {
+    font-style: italic;
+}
+
+article.main .content ul, article.main .content ol {
+    padding: 0px 60px;
+    margin-bottom: 40px;
+    padding-left: 80px;
+}
+
+article.main .content li {
+    list-style: disc inside;
+    margin-bottom: 2px;
+}
+
+article.main .content strong, article.main .content b {
+    font-weight: 600;
+}
+
+article.main .content blockquote {
+    background-color: rgba(0,0,0,.1);
+    opacity: .9;
+    position: relative;
+}
+
+article.main .content blockquote p {
+    padding: 20px 80px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+article.main .content blockquote:before {
+    content: '“';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 100px;
+    font-family: serif;
+    opacity: .1;
+}
+
+article.main .content figure {
+    position: relative;
+}
+
+article.main .content img {
+    max-width: 100%;
+    margin: auto;
+}
+
+/* --- Page 404 --- */
+
+.not-found {
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 15%;
+}
+
+.not-found h1 {
+    font-size: 150px;
+    font-family: 'Reef', sans-serif;
+}
+
+.not-found h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+@keyframes not-found {
+    0%   {opacity: 1;}
+    33% {opacity: .6}
+    66% {opacity: 1;}
+}
+
+.not-found h1 span {
+    animation-name: not-found;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.not-found h1 span:nth-child(2) {
+    animation-delay: .1s;
+}
+
+.not-found h1 span:nth-child(3) {
+    animation-delay: .2s;
+}
+
+.not-found a {
+    max-width: 280px;
+    margin: auto;
+    display: block;
+    font-size: 27px;
+    font-family: Reef, sans-serif;
+    text-transform: uppercase;
+    opacity: 0.8;
+    background-color: #E9E9E9;
+    padding: 12px 37px;
+    padding-top: 14px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all ease .3s;
+    text-decoration: none;
+    color: #000;
+    margin-top: 20px;
+}
+
+.not-found a:hover {
+    transition: all ease .1s;
+    background-color: #73aaa4;
+    color: #fff;
+    box-shadow: 3px 3px 20px rgba(0,0,0,.1);
+}
+
+.not-found a:active {
+    transition: all ease .1s;
+    background-color: #73aaa4;
+    color: #fff;
+    box-shadow: 3px 3px 20px rgba(0,0,0,.1), inset 2px 2px 20px rgba(0,0,0,.1);
+}
+
+@media screen and (max-width: 1050px) {
+    
+    .wrap-main {
+        margin-top: 10px;
+    }
+    
+    header.main .menu {
+        float: none;
+        bottom: -0px;
+        max-width: 870px;
+        width: 100%;
+        margin: auto !important;
+        position: relative;
+    }
+    
+    header.main .menu div#menu-btn {
+        width: 100%;
+        opacity: 1;
+        border-radius: 0px;
+        background-color: #ddd;
+        padding: 7px 0px;
+        padding-top: 9px;
+        text-align: center;
+    }
+    
+    header.main .menu div#menu-btn.show {
+        padding: 7px 0px;
+        padding-top: 9px;
+        transition-delay: .2s;
+    }
+    
+    header.main .menu ul {
+        margin-top: -50px;
+        margin-bottom: 50px;
+        border-radius: 0px;
+        padding: 5px 0px;
+        position: relative;
+        visibility: hidden;
+        height: 0px;
+        width: 100%;
+        opacity: 0;
+        transition: visibility 0s linear .2s, opacity .2s ease, top .2s ease;
+    }
+    
+    header.main .menu ul.show {
+        height: auto;
+        margin-bottom: 80px;
+    }
+    
+    header.main .menu li {
+        padding: 0px 20px;
+    }
+    
+    article.main.page .more a {
+        border-radius: 0px;
+    }
+    
+    article.main.page nav.pagination a {
+        border-radius: 0px !important;
+        width: 100%;
+        border: none;
+        margin-right: 0px;
+    }
+    
+    article.main.page nav.pagination div {
+        width: 50%;
+        display: inline-block;
+        border-top: 2px solid #efeae3;
+        border-bottom: 2px solid #efeae3;
+    }
+    
+    footer.main {
+        text-align: center;
+    }
+    
+    footer.main .content .left {
+        max-width: 100%;
+    }
+    
+    footer.main .search {
+        display: block;
+        max-width: 400px;
+        margin: auto;
+        margin-top: 40px;
+        float: none;
+    }
+    
+    footer.main .search:after {
+        top: 21px;
+    }
+    
+    footer.main .search input {
+        width: 100%;
+        max-width: 400px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    footer.main .search input:focus {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    footer.main .copyright {
+        margin-top: 40px;
+    }
+    
+    footer.main .admin {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    article.main.page article.event .desc {
+        display: block;
+        width: 100%;
+        text-align: justify;
+        padding-right: 5%;
+    }
+
+    article.main.page article.event .infos {
+        display: block;
+        width: 100%;
+        max-width: 360px;
+        margin: auto;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .mosaic a {
+        display: block;
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 8px;
+    }
+    
+    article.main .content p {
+        padding: 0px 30px;
+        text-align: justify;
+        font-size: 18px;
+    }
+    
+    article.main .content .infos p.right {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    article.main header h1.title {
+        font-size: 3.5em;
+    }
+    
+    article.main header .infos p {
+        font-size: 17px;
+        text-align: center;
+    }
+    
+    article.main .content h1 {
+        padding: 0px 30px;
+    }
+    
+    article.main .content h2, article.main .content h3 {
+        padding: 0px 20px;
+    }
+    
+    article.main .content p {
+        padding: 0px 13px;
+        font-size: 17px;
+        line-height: 1.2;
+    }
+}

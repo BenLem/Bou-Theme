@@ -1,0 +1,5 @@
+Theme name:    Jean-Yves Bou
+Description:   \\
+Author name:   Benjamin Lemoine
+Author site:   \\
+License:       http://licence.visualidiot.com
