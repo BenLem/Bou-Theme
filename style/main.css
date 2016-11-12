@@ -513,7 +513,7 @@ article.main.page .content {
     padding-top: 40px;
 }
 
-article.main.page .post {
+article.main.page .post, article.main.page.search .search-items {
     padding: 30px 50px;
     max-width: 784px;
     margin: auto;
@@ -878,6 +878,52 @@ article.main.page nav.pagination div.next a {
     border-left: 2px solid #e0dbd4;
 }
 
+/* --- Search --- */
+
+article.main.page.search .search-items {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+article.main.page.search .search-items li {
+    font-size: 21px;
+    margin: 40px 0px;
+    transition: all ease .3s;
+}
+
+article.main.page.search .search-items li a {
+    padding: 3px 0px;
+    display: inline-block;
+}
+
+article.main.page.search .search-items li:before {
+    content: '›';
+    margin-right: 13px;
+    opacity: .2;
+    transition: all ease .3s;
+}
+
+article.main.page.search .search-items li:after {
+    content: '';
+    max-width: 100px;
+    border-top: 2px solid #e0dbd4;
+    opacity: 1;
+}
+
+article.main.page.search .search-items li:hover {
+    padding-left: 8px;
+    transition: all ease .1s;
+}
+
+article.main.page.search .search-items li:hover:before {
+    margin-right: 10px;
+    opacity: .8;
+    transition: all ease .1s;
+}
+
+article.main.page.search .search-items li:first-child, article.main.page.search .search-items li:last-child {
+    margin: 0px;
+}
+
 /* --- Article --- */
 
 article.main header {
@@ -951,7 +997,7 @@ article.main .content p:last-child {
     margin-bottom: 0px;
 }
 
-article.main .content a {
+article.main .content a, article.main.page.search .search-items a {
     color: #2f3b62;
     cursor: pointer;
     text-decoration: none;
@@ -960,7 +1006,7 @@ article.main .content a {
     font-style: normal;
 }
 
-article.main .content a:hover {
+article.main .content a:hover, article.main.page.search .search-items a:hover {
     text-decoration: none;
     border-color: #282d3e;
 }
