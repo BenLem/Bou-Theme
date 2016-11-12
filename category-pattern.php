@@ -120,17 +120,23 @@
                 </article>
         <?php endif; endwhile;
                 
-        if ($article_count[0] == 0) {?>
-                <article class="post error">
-                    <h2 class="title">Erreur</h2>
+        if ($article_count[0] == 0 and $page<>'event'):?>
+            <article class="post error">
+                <h2 class="title">Erreur</h2>
 
-                    <div class="excerpt">
-                        <p>Il n'y a pas d'article dans cette catégorie</p>
-                    </div>
-                </article>
-        <?php };
-        
-        if ($more == true) {?>
+                <div class="excerpt">
+                    <p>Il n'y a pas d'article dans cette catégorie</p>
+                </div>
+            </article>
+        <?php elseif ($article_count[0] == 0 and $page=='event'):?>
+            <article class="post">
+                <h2 class="title">Pas d'evenements prévus</h2>
+
+                <div class="excerpt">
+                    <p><?php echo site_meta('events'); ?></p>
+                </div>
+            </article>
+        <?php endif; if ($more == true) {?>
             <div class="more">                
                 <a class='more <?=$page?>' href="<?=base_url();?>category/<?=$page;?>">Voir tous les articles de cette catégorie</a>
             </div>
