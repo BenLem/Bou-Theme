@@ -699,6 +699,10 @@ article.main.page footer .bar p:before {
     text-transform: none;
 }
 
+article.main.page footer .bar.sticky p:before {
+    content: '\e946';
+}
+
 article.main.page footer .read-more {
     position: absolute;
     top: -9px;

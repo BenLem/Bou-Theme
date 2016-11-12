@@ -52,6 +52,9 @@
 .icon-books:before {
   content: "\e920";
 }
+.icon-pushpin:before {
+  content: "\e946";
+}
 .icon-location:before {
   content: "\e947";
 }
@@ -61,11 +64,8 @@
 .icon-calendar:before {
   content: "\e953";
 }
-.icon-bubbles:before {
-  content: "\e96c";
-}
-.icon-user:before {
-  content: "\e971";
+.icon-user-tie:before {
+  content: "\e976";
 }
 .icon-search:before {
   content: "\e986";
@@ -73,4 +73,5 @@
 .icon-attachment:before {
   content: "\e9cd";
 }
+
 

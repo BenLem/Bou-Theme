@@ -25,7 +25,7 @@
         'event' => $event_desc);
 
     //Nombre d'articles par page :
-    $max_article_count = 6;
+    $max_article_count = 3;
 
     $article_count = array ('0' => 0, '1' => 0);
     $more = false;
@@ -39,13 +39,51 @@
                 <h3 class="cat"><?php echo $desc[$page] ?></h3>
             <?php endif;?>            
         </header>
-
         
         <?php while(latest_posts()): 
-            if (article_category_slug()==$page and $article_count[0] <= $max_article_count) {++$article_count[0];};
-            if ($article_count[0] > $max_article_count) {$more = true;};
             
-            if (article_category_slug()==$page and article_category_slug() <> 'event' and $article_count[1] < $max_article_count) :?>
+            if (article_custom_field('sticky')=='true' and article_category_slug()==$page): ?>
+
+                <article class="post <?php echo article_category_slug();?>">
+                    <h2 class="title"><a href="<?php echo article_url(); ?>"><?php echo article_title(); ?></a></h2>
+
+                    <div class="excerpt">
+                        <p><?php echo article_description(); ?></p>
+                    </div>
+
+                    <footer>
+                        <div class="bar sticky"><p>Épinglé</p></div>
+
+                        <a class="read-more" href="<?php echo article_url(); ?>">Lire la suite</a>
+                    </footer>
+                </article>
+        
+        <?php elseif(article_custom_field('sticky')=='true!'): ?>
+            
+                <article class="post <?php echo article_category_slug();?>">
+                    <h2 class="title"><a href="<?php echo article_url(); ?>"><?php echo article_title(); ?></a></h2>
+
+                    <div class="excerpt">
+                        <p><?php echo article_description(); ?></p>
+                    </div>
+
+                    <footer>
+                        <div class="bar sticky"><p>Épinglé</p></div>
+
+                        <a class="read-more" href="<?php echo article_url(); ?>">Lire la suite</a>
+                    </footer>
+                </article>
+    
+        <?php endif; endwhile; ?>
+        
+        <?php while(latest_posts()): 
+        
+            if (article_category_slug()==$page and $article_count[0] <= $max_article_count) {++$article_count[0];};
+            
+            if ($article_count[0] > $max_article_count) {$more = true;};
+        
+            if(article_category_slug()==$page and article_category_slug() <> 'event' and $article_count[1] < $max_article_count and article_custom_field('sticky')<>'true'):?>
+                    
                 <article class="post <?php echo article_category_slug();?>">
                     <h2 class="title"><a href="<?php echo article_url(); ?>"><?php echo article_title(); ?></a></h2>
 
@@ -60,13 +98,14 @@
                     </footer>
                 </article>
                 <?php ++$article_count[1];
+
             elseif (article_category_slug()==$page and article_category_slug()=='event') :?>
                 <article class="post <?php echo article_category_slug();?>">
                     <h2 class="title"><a href="<?php echo article_url(); ?>"><?php echo article_title(); ?></a></h2>
 
                     <div class="excerpt">
                         <div class='desc'><p><?php echo article_description(); ?></p></div><!--
-                        
+
                         --><div class='infos'>
                             <ul>
                                 <li class='date'><?php echo article_custom_field('date'); ?></li>
@@ -74,7 +113,7 @@
                                 <li class='place'><?php echo article_custom_field('place'); ?></li>
                                 <li class='city'><?=article_custom_field('city');?></li>
                             </ul>
-                            
+
                             <a class="read-more" href="<?php echo article_url(); ?>">En savoir plus</a>
                         </div>
                     </div>
