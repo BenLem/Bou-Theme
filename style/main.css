@@ -1,8 +1,12 @@
 body {
     background-color: #F5F3F0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 header.main {
+    width: 100%;
     max-width: 970px;
     margin: auto;
     position: relative;
@@ -196,8 +200,10 @@ header.main .menu ul a:hover:before {
 /* --- Home --- */
 
 .wrap-main {
+    width: 100%;
     max-width: 870px;
     margin: 40px auto;
+    flex: 1 0 auto;
 }
 
 .mosaic a.atlas {
