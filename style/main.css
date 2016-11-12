@@ -952,28 +952,6 @@ article.main .content p:last-child {
     margin-bottom: 0px;
 }
 
-article.main .content a {
-    color: #2f3b62;
-    cursor: pointer;
-    text-decoration: none;
-    border-bottom: 1px solid #bec1cb;
-    font-weight: 600;
-    font-style: normal;
-}
-
-article.main .content a:hover {
-    text-decoration: none;
-    border-color: #282d3e;
-}
-
-article.main .content h1 {
-    font-size: 28px;
-    font-family: "Roboto Condensed", Roboto, sans-serif;
-    font-weight: 600;
-    margin-bottom: 35px;
-    padding: 0px 60px;
-}
-
 article.main .content h1 {
     font-size: 28px;
     font-family: "Roboto Condensed", Roboto, sans-serif;
