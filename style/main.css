@@ -435,7 +435,6 @@ footer.main .search input {
     max-width: 200px;
     opacity: .5;
     color: #fff;
-    text-transform: uppercase;
     font-weight: 300;
     transition: all ease .2s;
     outline: none;
