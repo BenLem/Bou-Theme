@@ -427,24 +427,28 @@ footer.main .search input {
     padding: 10px 20px;
     padding-right: 50px;
     font-size: 20px;
+    width: 200px;
     max-width: 200px;
     opacity: .5;
     color: #fff;
     font-weight: 300;
-    transition: all ease .2s;
+    transition: all ease .5s;
     outline: none;
     z-index: 20;
 }
 
 footer.main .search input:hover {
     background-color: #3e4448;
+    transition: all ease .1s;
 }
 
 footer.main .search input:focus {
     background-color: #fff;
     color: #000;
     opacity: 1;
-    max-width: 300px;
+    width: 400px;
+    max-width: 400px;
+    transition: all ease .3s;
 }
 
 /* --- Category Pages --- */
