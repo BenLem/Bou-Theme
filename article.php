@@ -18,8 +18,8 @@
                     <ul class="commentlist">
                         <?php while(comments()): ?>
                         <li class="comment" id="comment-<?php echo comment_id(); ?>">
-                            <div class='comment-content'>                                    
-                                <div class='comment-infos'><h2><?php echo comment_name(); ?></h2><time><?php echo relative_time(comment_time()); ?></time></div>
+                            <div class='comment-content <?php if(comment_email()==article_author_email()){echo 'author';} ?>'>                                    
+                                <div class='comment-infos'><h2 class='author'><?php echo comment_name(); ?></h2><time><?php echo relative_time(comment_time()); ?></time></div>
                                 
                                 <?php $Comment = new Parsedown(); echo $Comment->text(comment_text()); ?>
                             </div>
@@ -38,10 +38,11 @@
 
                         <p class="textarea">
                             <?php echo comment_form_input_text('placeholder="Votre commentaire"'); ?>
+                            <span class='format'><span class='right'>(Vous pouvez formater en <a href='<?php echo base_url(); ?>formatage-des-commentaires' target='_blank'>Markdown</a>)</span></span>
                         </p>
 
                         <p class="submit">
-                            <?php echo comment_form_button(); ?>
+                            <?php echo comment_form_button('Poster votre commentaire'); ?>
                         </p>
                     </form>
 
