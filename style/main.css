@@ -1165,6 +1165,105 @@ article.main .content img {
     box-shadow: 3px 3px 20px rgba(0,0,0,.1), inset 2px 2px 20px rgba(0,0,0,.1);
 }
 
+/* --- Comments --- */
+
+.content .comments {
+    border-top: 4px dotted rgba(0,0,0,.1);
+    padding-top: 40px;
+    margin-top: 60px;
+}
+
+.content .comments h2.title {
+    font-family: 'Karmina Bold', 'Roboto Condensed';
+    font-size: 50px;
+    letter-spacing: 3px;
+    padding: 0px 60px;
+}
+
+.content .comments .commentlist {
+    padding: 0px 60px;
+}
+
+.content .comments .commentlist li {
+    list-style: none;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.content .comments .commentlist .comment-infos {
+    margin-bottom: 15px;
+}
+
+.content .comments .commentlist .comment-infos h2 {
+    padding: 0px 0px;
+    margin-bottom: -10px;
+    font-family: "Karmina Bold", "Roboto Condensed", sans-serif;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.content .comments .commentlist .comment-infos time {
+    opacity: .5;
+    font-size: 15px;
+}
+
+.content .comments .commentlist li .comment-content {
+    background-color: #fcfcfc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+    color: #555f77;
+    font-size: 16px;
+    padding: 25px 4%;
+}
+
+.content .comments .commentlist li .comment-content:before {
+	content: "";
+	width: 0px;
+	height: 0px;
+	border: .6em solid transparent;
+	position: absolute;
+    left: 30px;
+	top: -18px;
+	border-bottom: 10px solid #fcfcfc;
+}
+
+.content .comments .commentlist li .comment-content p {
+    padding: 0px;
+    margin-bottom: 15px;
+}
+
+.content .comments .commentlist li .comment-content p:last-child {
+    margin-bottom: 0px;
+}
+
+.content form#comment input, .content form#comment textarea {
+    background-color: #fcfcfc;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+    color: #555f77;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 15px 3%;
+    outline: none;
+}
+
+.content form#comment input {
+    display: inline-block;
+    width: 42%;
+}
+
+.content form#comment input:first-child {
+    margin-right: 2%;
+}
+
+.content form#comment textarea {
+    width: 100%;
+    max-width: 93%;
+    height: 120px;
+    max-height: 320px;
+}
+
 @media screen and (max-width: 1050px) {
     
     .wrap-main {
@@ -1311,6 +1410,14 @@ article.main .content img {
     article.main .content .infos p.right {
         display: none;
     }
+    
+    .content .comments .commentlist {
+        padding: 0px 30px;
+    }
+    
+    .content .comments .commentlist li .comment-content {
+        padding: 15px 4%;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -1335,5 +1442,9 @@ article.main .content img {
         padding: 0px 13px;
         font-size: 17px;
         line-height: 1.2;
+    }
+    
+    .content .comments .commentlist {
+        padding: 0px 13px;
     }
 }
