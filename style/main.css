@@ -347,6 +347,10 @@ header.main .menu ul a:hover:before {
 
 /* --- Home --- Sticky event --- */
 
+.sticky-event:first-child {
+    margin-top: -20px;
+}
+
 .sticky-event a {
     display: block;
     text-decoration: none;
@@ -1560,6 +1564,23 @@ article.main .content img {
     
     header.main .menu li {
         padding: 0px 20px;
+    }
+    
+    .sticky-event:first-child {
+        margin-top: 0px;
+    }
+    
+    .sticky-event:first-child a {
+        border-radius: 0px;
+        text-align: center;
+    }
+    
+    .sticky-event a .title:before {
+        display: none;
+    }
+    
+    .sticky-event a .more {
+        display: none;
     }
     
     article.main.page .more a {
