@@ -42,7 +42,7 @@
         
         <?php while(latest_posts()): 
             
-            if (article_custom_field('sticky')=='true' and article_category_slug()==$page): ?>
+            if (article_custom_field('sticky')=='true' and article_category_slug()==$page and article_category_slug()<>'event'): ?>
 
                 <article class="post <?php echo article_category_slug();?>">
                     <h2 class="title"><a href="<?php echo article_url(); ?>"><?php echo article_title(); ?></a></h2>
@@ -58,7 +58,7 @@
                     </footer>
                 </article>
         
-        <?php elseif(article_custom_field('sticky')=='true!'): ?>
+        <?php elseif(article_custom_field('sticky')=='true!' and article_category_slug()<>'event'): ?>
             
                 <article class="post <?php echo article_category_slug();?>">
                     <h2 class="title"><a href="<?php echo article_url(); ?>"><?php echo article_title(); ?></a></h2>

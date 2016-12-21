@@ -345,6 +345,100 @@ header.main .menu ul a:hover:before {
     left: 0px;
 }
 
+/* --- Home --- Sticky event --- */
+
+.sticky-event a {
+    display: block;
+    text-decoration: none;
+    background-color: #bc472e;
+    border: 2px solid #a7361d;
+    border-radius: 6px;
+    padding: 9px 16px;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    position: relative;
+    margin-bottom: 15px;
+    transition: all ease .3s;
+}
+
+.sticky-event a:hover {
+    transition: all ease .1s;
+    background-color: #a7361d;
+}
+
+.sticky-event .title {
+    position: relative;
+    transition: all ease .3s;
+}
+
+.sticky-event .title:before {
+    content: '';
+    height: 1px;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    opacity: .8;
+}
+
+.sticky-event:hover .title {
+    margin-left: 10px;
+    transition: all ease .1s;
+}
+
+.sticky-event .coming-soon {
+    font-size: 17px;
+    opacity: .7;
+    margin-right: 3px;
+    margin-left: 24px;
+}
+
+.sticky-event .coming-soon:before {
+    content: "\e94e";
+	font-family: icomoon;
+    font-size: 16px;
+    opacity: .6;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    z-index: 1;
+}
+
+.sticky-event .more {
+    opacity: .8;
+    position: absolute;
+    top: 9px;
+    right: 20px;
+    transition: all ease .3s;
+}
+
+.sticky-event:hover .more {
+    opacity: 1;
+    right: 14px;
+    transition: all ease .1s;
+}
+
+.sticky-event .more:before {
+    content: "";
+	width: 0px;
+	height: 0px;
+	border: 0.3em solid transparent;
+	position: absolute;
+    left: -25px;
+	top: 4px;
+	border-left: 9px solid #fff;
+    opacity: .5;
+    transition: all ease .3s;
+}
+
+.sticky-event:hover .more:before {
+    transition: all ease .1s;
+    left: -18px;
+    opacity: 1;
+}
+
 /* --- Footer --- */
 
 footer.main {

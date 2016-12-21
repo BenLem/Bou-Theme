@@ -12,6 +12,17 @@
     endwhile; ?>
 
     <div class='wrap-main'>
+        <?php while(latest_posts()): 
+            
+            if (article_custom_field('sticky')=='true!' and article_category_slug()=='event'): ?>
+
+                <article class="sticky-event">
+                    <a href="<?=article_url()?>">
+                        <h3 class='event'><span class='coming-soon'>À venir ... </span><span class='title'><?php echo article_title(); ?></span></h3>
+                        <span class='more'>En savoir plus</span>
+                    </a>
+                </article>
+        <?php endif; endwhile; ?>
         <section class='mosaic'>
             <a href='<?php echo base_url(); ?>atlas-du-rouergue' class='atlas'>
                 <div class='content'>
