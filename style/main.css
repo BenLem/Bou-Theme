@@ -652,18 +652,18 @@ article.main.page .excerpt {
     border-top: 2px solid rgba(0,0,0,.05);
 }
 
-article.main.page article.event .excerpt {
+article.event .excerpt {
     margin-bottom: 0;
 }
 
-article.main.page article.event .desc {
+article.event .desc {
     display: inline-block;
     width: 55%;
     text-align: justify;
     padding-right: 5%;
 }
 
-article.main.page article.event .infos {
+article.event .event-infos {
     display: inline-block;
     width: 40%;
     vertical-align: top;
@@ -671,22 +671,37 @@ article.main.page article.event .infos {
     color: #969594;
 }
 
-article.main.page article.event .infos ul {
+article.event.single .event-infos {
+    width: 100%;
+    margin-bottom: -40px;
+    padding: 30px 0px;
+}
+
+article.event.single .event-infos ul {
+    margin-bottom: 0px;
+    max-width: 250px;
+}
+
+
+article.event .event-infos ul {
     padding: 20px 30px;
     padding-right: 30px;
     text-align: right;
+    margin: auto;
 }
 
-article.main.page article.event .infos li {
+article.event .event-infos li {
     position: relative;
     padding-left: 10px;
+    list-style: none !important; 
+    margin-bottom: 0px !important;
 }
 
-article.main.page article.event .infos li.date {
+article.event .event-infos li.date {
     display: inline-block;
 }
 
-article.main.page article.event .infos li.date:after {
+article.event .event-infos li.date:after {
     content: '\e953';
     position: absolute;
     left: -22px;
@@ -701,12 +716,12 @@ article.main.page article.event .infos li.date:after {
     text-transform: none;
 }
 
-article.main.page article.event .infos li.time {
+article.event .event-infos li.time {
     float: left;
     vertical-align: top;
 }
 
-article.main.page article.event .infos li.time:before {
+article.event .event-infos li.time:before {
     content: '\e94e';
     position: absolute;
     left: -13px;
@@ -721,7 +736,7 @@ article.main.page article.event .infos li.time:before {
     text-transform: none;
 }
 
-article.main.page article.event .infos li.place {
+article.event .event-infos li.place {
     text-align: left;
     margin-top: 17px;
     padding-top: 17px;
@@ -729,7 +744,7 @@ article.main.page article.event .infos li.place {
     border-top: 2px solid rgba(0,0,0,.05);
 }
 
-article.main.page article.event .infos li.place:before {
+article.event .event-infos li.place:before {
     content: '\e947';
     position: absolute;
     left: -13px;
@@ -744,12 +759,14 @@ article.main.page article.event .infos li.place:before {
     text-transform: none;
 }
 
-article.main.page article.event .infos li.city {
+article.event .event-infos li.city {
     text-align: left;
 }
 
-article.main.page article.event .infos a.read-more {
+article.event a.read-more {
     display: block;
+    width: 55%;
+    margin-top: -53px;
     color: #fff;
     text-decoration: none;
     font-family: 'Roboto Condensed', sans-serif;
@@ -760,7 +777,13 @@ article.main.page article.event .infos a.read-more {
     transition: opacity ease .3s;
 }
 
-article.main.page article.event .infos a.read-more:hover {
+article.event a.read-more.break {
+    margin-top: 0px;
+    width: 100%;
+    display: none;
+}
+
+article.event a.read-more:hover {
     opacity: .9;
     transition: opacity ease .1s;
 }
@@ -845,7 +868,7 @@ article.main.page article.ressources footer .read-more, article.main.page .more 
     background-color: #123B57;
 }
 
-article.main.page article.event .read-more, article.main.page .more a.event {
+article.event .read-more, article.main.page .more a.event {
     background-color: #a7361d;
 }
 
@@ -1606,12 +1629,20 @@ article.main .content img {
         padding-right: 5%;
     }
 
-    article.main.page article.event .infos {
+    article.main.page article.event .event-infos {
         display: block;
         width: 100%;
         max-width: 360px;
         margin: auto;
         margin-top: 30px;
+    }
+    
+    article.main.page article.event a.read-more {
+        display: none;
+    }
+    
+    article.main.page article.event a.read-more.break {
+        display: block;
     }
 }
 

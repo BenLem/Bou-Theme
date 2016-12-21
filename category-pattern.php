@@ -58,7 +58,7 @@
                     </footer>
                 </article>
         
-        <?php elseif(article_custom_field('sticky')=='true!' and article_category_slug()<>'event'): ?>
+        <?php elseif(article_custom_field('sticky')=='true!' and $page<>'event' and article_category_slug()<>'event'): ?>
             
                 <article class="post <?php echo article_category_slug();?>">
                     <h2 class="title"><a href="<?php echo article_url(); ?>"><?php echo article_title(); ?></a></h2>
@@ -106,16 +106,17 @@
                     <div class="excerpt">
                         <div class='desc'><p><?php echo article_description(); ?></p></div><!--
 
-                        --><div class='infos'>
+                        --><div class='event-infos'>
                             <ul>
                                 <li class='date'><?php echo article_custom_field('date'); ?></li>
                                 <li class='time'><?php echo article_custom_field('heure'); ?></li>
                                 <li class='place'><?php echo article_custom_field('place'); ?></li>
                                 <li class='city'><?=article_custom_field('city');?></li>
                             </ul>
-
+                            <a class="read-more break" href="<?php echo article_url(); ?>">En savoir plus</a>
+                            </div>
+                        
                             <a class="read-more" href="<?php echo article_url(); ?>">En savoir plus</a>
-                        </div>
                     </div>
                 </article>
         <?php endif; endwhile;
