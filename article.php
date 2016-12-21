@@ -11,7 +11,7 @@
                 
                 <?php echo article_markdown(); ?>
                 
-                <aside class='event-infos'>
+                <?php if(article_category_slug()=='event'){?><aside class='event-infos'>
                     <ul>
                         <li class='date'><?php echo article_custom_field('date'); ?></li>
                         <li class='time'><?php echo article_custom_field('heure'); ?></li>
@@ -19,6 +19,7 @@
                         <li class='city'><?=article_custom_field('city');?></li>
                     </ul>
                 </aside>
+                <?php }; ?>
                 
                 <?php if(comments_open()): ?>
                 <section class="comments">
