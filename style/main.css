@@ -354,8 +354,8 @@ header.main .menu ul a:hover:before {
 .sticky-event a {
     display: block;
     text-decoration: none;
-    background-color: #bc472e;
-    border: 2px solid #a7361d;
+    background-color: #73aaa4;
+    border: 2px solid #649892;
     border-radius: 6px;
     padding: 9px 16px;
     color: #fff;
@@ -369,7 +369,7 @@ header.main .menu ul a:hover:before {
 
 .sticky-event a:hover {
     transition: all ease .1s;
-    background-color: #a7361d;
+    background-color: #649892;
 }
 
 .sticky-event .title {
