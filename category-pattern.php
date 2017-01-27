@@ -7,7 +7,7 @@
             case 'carto'; $carto = category_title(); $carto_desc = category_description(); break;
             case 'art'; $art = category_title(); $art_desc = category_description(); break;
             case 'ressources'; $ressources = category_title(); $ressources_desc = category_description(); break;
-            case 'event'; $event = category_title(); $event_desc = category_description(); break;
+            case 'actualites'; $actualites = category_title(); $actualites_desc = category_description(); break;
         }
     endwhile;
     
@@ -19,7 +19,7 @@
         'carto' => $carto,
         'art' => $art,
         'ressources' => $ressources,
-        'event' => $event);
+        'actualites' => $actualites);
     $desc = array (
         'atlas' => $atlas_desc,
         'saint-leons' => $saint_leons_desc,
@@ -28,7 +28,7 @@
         'carto' => $carto_desc,
         'art' => $art_desc,
         'ressources' => $ressources_desc,
-        'event' => $event_desc);
+        'actualites' => $actualites_desc);
 
     //Nombre d'articles par page :
     $max_article_count = 3;
@@ -48,7 +48,7 @@
         
         <?php while(latest_posts()): 
             
-            if (article_custom_field('sticky')=='true' and article_category_slug()==$page and article_category_slug()<>'event'): ?>
+            if (article_custom_field('sticky')=='true' and article_category_slug()==$page and article_category_slug()<>'actualites'): ?>
 
                 <article class="post <?php echo article_category_slug();?>">
                     <h2 class="title"><a href="<?php echo article_url(); ?>"><?php echo article_title(); ?></a></h2>
@@ -64,7 +64,7 @@
                     </footer>
                 </article>
         
-        <?php elseif(article_custom_field('sticky')=='true!' and $page<>'event' and article_category_slug()<>'event'): ?>
+        <?php elseif(article_custom_field('sticky')=='true!' and $page<>'actualites' and article_category_slug()<>'actualites'): ?>
             
                 <article class="post <?php echo article_category_slug();?>">
                     <h2 class="title"><a href="<?php echo article_url(); ?>"><?php echo article_title(); ?></a></h2>
@@ -88,7 +88,7 @@
             
             if ($article_count[0] > $max_article_count) {$more = true;};
         
-            if(article_category_slug()==$page and article_category_slug() <> 'event' and $article_count[1] < $max_article_count and article_custom_field('sticky')<>'true'):?>
+            if(article_category_slug()==$page and article_category_slug() <> 'actualites' and $article_count[1] < $max_article_count and article_custom_field('sticky')<>'true'):?>
                     
                 <article class="post <?php echo article_category_slug();?>">
                     <h2 class="title"><a href="<?php echo article_url(); ?>"><?php echo article_title(); ?></a></h2>
@@ -105,14 +105,14 @@
                 </article>
                 <?php ++$article_count[1];
 
-            elseif (article_category_slug()==$page and article_category_slug()=='event') :?>
+            elseif (article_category_slug()==$page and article_category_slug()=='actualites') :?>
                 <article class="post <?php echo article_category_slug();?>">
                     <h2 class="title"><a href="<?php echo article_url(); ?>"><?php echo article_title(); ?></a></h2>
 
                     <div class="excerpt">
                         <div class='desc'><p><?php echo article_description(); ?></p></div><!--
 
-                        --><div class='event-infos'>
+                        --><div class='actualites-infos'>
                             <ul>
                                 <li class='date'><?php echo article_custom_field('date'); ?></li>
                                 <li class='time'><?php echo article_custom_field('heure'); ?></li>
@@ -127,7 +127,7 @@
                 </article>
         <?php endif; endwhile;
                 
-        if ($article_count[0] == 0 and $page<>'event'):?>
+        if ($article_count[0] == 0 and $page<>'actualites'):?>
             <article class="post error">
                 <h2 class="title">Erreur</h2>
 
@@ -135,7 +135,7 @@
                     <p>Il n'y a pas d'article dans cette catégorie</p>
                 </div>
             </article>
-        <?php elseif ($article_count[0] == 0 and $page=='event'):?>
+        <?php elseif ($article_count[0] == 0 and $page=='actualites'):?>
             <article class="post">
                 <h2 class="title">Pas d'evenements prévus</h2>
 

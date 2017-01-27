@@ -9,18 +9,18 @@
             case 'carto'; $carto = category_title(); $carto_desc = category_description(); break;
             case 'art'; $art = category_title(); $art_desc = category_description(); break;
             case 'ressources'; $ressources = category_title(); $ressources_desc = category_description(); break;
-            case 'event'; $event = category_title(); $event_desc = category_description(); break;
+            case 'actualites'; $actualites = category_title(); $actualites_desc = category_description(); break;
         }
     endwhile; ?>
 
     <div class='wrap-main'>
         <?php while(latest_posts()): 
             
-            if (article_custom_field('sticky')=='true!' and article_category_slug()=='event'): ?>
+            if (article_custom_field('sticky')=='true!' and article_category_slug()=='actualites'): ?>
 
-                <article class="sticky-event">
+                <article class="sticky-actualites">
                     <a href="<?=article_url()?>">
-                        <h3 class='event'><span class='coming-soon'>À venir ... </span><span class='title'><?php echo article_title(); ?></span></h3>
+                        <h3 class='actualites'><span class='coming-soon'>Actualité ... </span><span class='title'><?php echo article_title(); ?></span></h3>
                         <span class='more'>En savoir plus</span>
                     </a>
                 </article>
@@ -75,10 +75,10 @@
                 </div>
             </a><!--
 
-            --><a href='<?php echo base_url(); ?>evenements' class='event'>
+            --><a href='<?php echo base_url(); ?>actualites' class='actualites'>
                 <div class='content'>
-                    <h1><?php echo $event ?></h1>
-                    <h3><?php echo $event_desc ?></h3>
+                    <h1><?php echo $actualites ?></h1>
+                    <h3><?php echo $actualites_desc ?></h3>
                 </div>
             </a>
 

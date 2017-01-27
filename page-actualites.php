@@ -1,7 +1,7 @@
 <?php theme_include('header'); ?>
 
     <?php 
-        $page = 'event';
+        $page = 'actualites';
         include 'category-pattern.php'; 
     ?>
 
