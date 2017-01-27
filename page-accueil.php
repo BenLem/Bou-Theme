@@ -3,7 +3,9 @@
     <?php while(categories()): 
         switch (category_slug()) {
             case 'atlas'; $atlas = category_title(); $atlas_desc = category_description(); break;
+            case 'saint-leons'; $saint_leons = category_title(); $saint_leons_desc = category_description(); break;
             case 'histoires'; $histoires = category_title(); $histoires_desc = category_description(); break;
+            case 'migrations'; $migrations = category_title(); $migrations_desc = category_description(); break;
             case 'carto'; $carto = category_title(); $carto_desc = category_description(); break;
             case 'art'; $art = category_title(); $art_desc = category_description(); break;
             case 'ressources'; $ressources = category_title(); $ressources_desc = category_description(); break;
@@ -31,10 +33,24 @@
                 </div>
             </a><!--
 
+            --><a href='<?php echo base_url(); ?>saint-leons' class='saint-leons'>
+                <div class='content'>    
+                    <h1><?php echo $saint_leons ?></h1>
+                    <h3><?php echo $saint_leons_desc ?></h3>
+                </div>
+            </a><!--
+
             --><a href='<?php echo base_url(); ?>histoires' class='histoires'>
                 <div class='content'>
                     <h1><?php echo $histoires ?></h1>
                     <h3><?php echo $histoires_desc ?></h3>
+                </div>
+            </a><!--
+
+            --><a href='<?php echo base_url(); ?>migrations' class='migrations'>
+                <div class='content'>    
+                    <h1><?php echo $migrations ?></h1>
+                    <h3><?php echo $migrations_desc ?></h3>
                 </div>
             </a><!--
 

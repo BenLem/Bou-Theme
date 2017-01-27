@@ -1,7 +1,9 @@
     <?php while(categories()): 
         switch (category_slug()) {
             case 'atlas'; $atlas = category_title(); $atlas_desc = category_description(); break;
+            case 'saint-leons'; $saint_leons = category_title(); $saint_leons_desc = category_description(); break;
             case 'histoires'; $histoires = category_title(); $histoires_desc = category_description(); break;
+            case 'migrations'; $migrations = category_title(); $migrations_desc = category_description(); break;
             case 'carto'; $carto = category_title(); $carto_desc = category_description(); break;
             case 'art'; $art = category_title(); $art_desc = category_description(); break;
             case 'ressources'; $ressources = category_title(); $ressources_desc = category_description(); break;
@@ -11,14 +13,18 @@
     
     $cat = array (
         'atlas' => $atlas,
+        'saint-leons' => $saint_leons,
         'histoires' => $histoires,
+        'migrations' => $migrations,
         'carto' => $carto,
         'art' => $art,
         'ressources' => $ressources,
         'event' => $event);
     $desc = array (
         'atlas' => $atlas_desc,
+        'saint-leons' => $saint_leons_desc,
         'histoires' => $histoires_desc,
+        'migrations' => $migrations_desc,
         'carto' => $carto_desc,
         'art' => $art_desc,
         'ressources' => $ressources_desc,

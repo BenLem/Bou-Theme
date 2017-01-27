@@ -210,8 +210,16 @@ header.main .menu ul a:hover:before {
     background: url(res/atlas.png) #A3B960;
 }
 
+.mosaic a.saint-leons {
+    background: url(res/saint-leons.png) #ccc85d;
+}
+
 .mosaic a.histoires {
     background: url(res/histoires.png) #e8c340;
+}
+
+.mosaic a.migrations {
+    background: url(res/migrations-2.png) #73aaa4;
 }
 
 .mosaic a.carto {
@@ -319,6 +327,7 @@ header.main .menu ul a:hover:before {
     left: 40px;
     text-align: left;
 }
+
 
 /* --- Home --- À propos --- */
 
@@ -587,9 +596,17 @@ article.main.atlas header {
     background-color: #A3B960;
 }
 
+article.main.saint-leons header {
+    background-color: #ccc85d;
+}
+
 article.main.histoires header {
     background-color: #e8c340;
     text-shadow: 0px 0px 7px rgba(0,0,0,.2);
+}
+
+article.main.migrations header {
+    background-color: #73aaa4;
 }
 
 article.main.carto header {
@@ -855,9 +872,17 @@ article.main.page article.atlas footer .read-more, article.main.page .more a.atl
     background-color: #A3B960;
 }
 
+article.main.page article.saint-leons footer .read-more, article.main.page .more a.saint-leons {
+    background-color: #ccc85d;
+}
+
 article.main.page article.histoires footer .read-more, article.main.page .more a.histoires {
     background-color: #e8c340;
     text-shadow: 0px 0px 7px rgba(0,0,0,.1);
+}
+
+article.main.page article.migrations footer .read-more, article.main.page .more a.migrations {
+    background-color: #73aaa4;
 }
 
 article.main.page article.carto footer .read-more, article.main.page .more a.carto {
